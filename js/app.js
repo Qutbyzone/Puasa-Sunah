@@ -293,4 +293,9 @@ document.addEventListener("DOMContentLoaded", () => {
       window.print();
     });
   }
+
+  // 13. INISIALISASI PENGONTROL LAYAR PENUH (FULLSCREEN UNIVERSAL)
+  if (window.MPI_FULLSCREEN) {
+    window.MPI_FULLSCREEN.init();
+  }
 });
