@@ -116,4 +116,17 @@
   .header-title {
     font-size: 0.95rem;
   }
+
+  .global-fullscreen-fab {
+    bottom: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .global-fullscreen-fab .fs-icon {
+    font-size: 1.25rem;
+  }
 }
