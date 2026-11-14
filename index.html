@@ -15,6 +15,8 @@
 
   <!-- Universal Image Fallback System (Dukungan Otomatis PNG, JPG, JPEG) -->
   <script src="js/image-fallback.js"></script>
+  <!-- Viewport Scaling Engine (Fixed Design Canvas 16:9 Uniform Scaling) -->
+  <script src="js/viewport-scale.js"></script>
 </head>
 <body>
 
@@ -512,7 +514,7 @@
             </div>
 
             <div class="report-creator-credit" style="margin-top: 14px; padding-top: 8px; border-top: 1px dashed #b0bec5; font-size: 0.82rem; color: #546e7a;">
-              Dikembangkan oleh: <strong>Andriansyah, S.Pd.I.</strong>
+              Kreator: <strong>Andriansyah, S.Pd.I.</strong>
             </div>
           </div>
 
@@ -684,75 +686,78 @@
         <span class="fs-icon fs-icon-compress" style="display: none;">🗗</span>
       </button>
 
+      <!-- ========================================== -->
+      <!-- MODAL: UMPAN BALIK JAWABAN (FEEDBACK)      -->
+      <!-- ========================================== -->
+      <div id="feedback-modal" class="feedback-modal" role="dialog" aria-modal="true">
+        <div class="modal-card">
+          <h3 id="feedback-title" style="margin-bottom: 12px; font-size: 1.35rem;">Umpan Balik</h3>
+          <p id="feedback-text" style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.5; margin-bottom: 24px;">
+            Penjelasan jawaban kuis.
+          </p>
+          <button class="graphic-action-btn" id="feedback-btn" title="Lanjut">
+            <img src="assets/ui/btn-lanjut-soal.png" class="btn-img-asset" alt="Lanjut">
+          </button>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: PERAYAAN LENCANA (CELEBRATION)       -->
+      <!-- ========================================== -->
+      <div id="badge-modal" class="badge-modal" role="dialog" aria-modal="true">
+        <div class="modal-card" style="border: 3px solid var(--color-gold);">
+          <div style="font-size: 2.5rem;">🎉 ✨ 🏆</div>
+          <h2 style="color: var(--color-gold-dark); margin-top: 6px;">LENCANA HIKMAH DIRAIH!</h2>
+          <img id="badge-celebrate-img" src="" alt="Lencana" class="badge-celebrate-img">
+          <h3 id="badge-celebrate-name" style="color: var(--color-primary-dark); margin-bottom: 8px;">Nama Lencana</h3>
+          <p id="badge-celebrate-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 24px;">
+            Deskripsi pencapaian misi.
+          </p>
+          <button class="graphic-action-btn pulse-ready" id="badge-claim-btn" title="Klaim Lencana">
+            <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" alt="Simpan ke Koleksi Lencana">
+          </button>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: BANTUAN & PANDUAN                   -->
+      <!-- ========================================== -->
+      <div id="help-modal" class="app-modal" role="dialog" aria-modal="true">
+        <div class="modal-card" style="text-align: left; max-width: 600px;">
+          <h3 style="color: var(--color-primary-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <img src="assets/icons/icon-bantuan.png" style="width: 28px; height: 28px;" alt=""> Panduan Ekspedisi Pulau Hikmah
+          </h3>
+          <div style="font-size: 0.95rem; color: var(--text-main); line-height: 1.6; max-height: 60vh; overflow-y: auto; padding-right: 8px;">
+            <p><strong>Cara Bermain:</strong></p>
+            <ol style="padding-left: 20px; margin: 8px 0 16px;">
+              <li>Tulis nama penjelajahmu di dermaga pendaftaran.</li>
+              <li>Buka Peta Pulau Hikmah dan pilih lokasi misi yang terbuka (dimulai dari Misi 1).</li>
+              <li>Pelajari materi dengan mengklik tab informasi atau kartu puasa sunah.</li>
+              <li>Selesaikan tantangan interaktif (pilihan ganda, benar-salah, mencocokkan, atau mengelompokkan) untuk membuka tombol klaim lencana.</li>
+              <li>Kumpulkan 5 Lencana Hikmah untuk menyelesaikan seluruh ekspedisi!</li>
+            </ol>
+            <p><strong>Pendamping Petualang Kaka:</strong></p>
+            <ul style="padding-left: 20px; margin: 8px 0;">
+              <li>Kaka siap mendampingi penjelajahanmu di setiap pulau dengan narasi dan petunjuk otomatis di setiap misi.</li>
+              <li>Setiap halaman menyajikan ekspresi dan perlengkapan unik Kaka sesuai tema petualangan.</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+            <button class="graphic-action-btn" id="help-modal-close" title="Tutup Panduan">
+              <img src="assets/ui/btn-tutup-panduan.png" class="btn-img-asset" alt="Tutup Panduan">
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /app-stage -->
+
+    <!-- PETUNJUK ROTASI UNTUK LAYAR HP PORTRAIT (DI AREA LETTERBOX) -->
+    <div id="orientation-rotate-hint" class="orientation-rotate-hint" aria-hidden="true">
+      <span class="hint-icon">📱 🔄</span>
+      <span class="hint-text">Putar layar ke posisi lanskap untuk tampilan lebih nyaman</span>
+    </div>
   </div><!-- /app-viewport -->
-
-
-  <!-- ========================================== -->
-  <!-- MODAL: UMPAN BALIK JAWABAN (FEEDBACK)      -->
-  <!-- ========================================== -->
-  <div id="feedback-modal" class="feedback-modal" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <h3 id="feedback-title" style="margin-bottom: 12px; font-size: 1.35rem;">Umpan Balik</h3>
-      <p id="feedback-text" style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.5; margin-bottom: 24px;">
-        Penjelasan jawaban kuis.
-      </p>
-      <button class="graphic-action-btn" id="feedback-btn" title="Lanjut">
-        <img src="assets/ui/btn-lanjut-soal.png" class="btn-img-asset" alt="Lanjut">
-      </button>
-    </div>
-  </div>
-
-
-  <!-- ========================================== -->
-  <!-- MODAL: PERAYAAN LENCANA (CELEBRATION)       -->
-  <!-- ========================================== -->
-  <div id="badge-modal" class="badge-modal" role="dialog" aria-modal="true">
-    <div class="modal-card" style="border: 3px solid var(--color-gold);">
-      <div style="font-size: 2.5rem;">🎉 ✨ 🏆</div>
-      <h2 style="color: var(--color-gold-dark); margin-top: 6px;">LENCANA HIKMAH DIRAIH!</h2>
-      <img id="badge-celebrate-img" src="" alt="Lencana" class="badge-celebrate-img">
-      <h3 id="badge-celebrate-name" style="color: var(--color-primary-dark); margin-bottom: 8px;">Nama Lencana</h3>
-      <p id="badge-celebrate-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 24px;">
-        Deskripsi pencapaian misi.
-      </p>
-      <button class="graphic-action-btn pulse-ready" id="badge-claim-btn" title="Klaim Lencana">
-        <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" alt="Simpan ke Koleksi Lencana">
-      </button>
-    </div>
-  </div>
-
-
-  <!-- ========================================== -->
-  <!-- MODAL: BANTUAN & PANDUAN                   -->
-  <!-- ========================================== -->
-  <div id="help-modal" class="app-modal" role="dialog" aria-modal="true">
-    <div class="modal-card" style="text-align: left; max-width: 600px;">
-      <h3 style="color: var(--color-primary-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-        <img src="assets/icons/icon-bantuan.png" style="width: 28px; height: 28px;" alt=""> Panduan Ekspedisi Pulau Hikmah
-      </h3>
-      <div style="font-size: 0.95rem; color: var(--text-main); line-height: 1.6; max-height: 60vh; overflow-y: auto; padding-right: 8px;">
-        <p><strong>Cara Bermain:</strong></p>
-        <ol style="padding-left: 20px; margin: 8px 0 16px;">
-          <li>Tulis nama penjelajahmu di dermaga pendaftaran.</li>
-          <li>Buka Peta Pulau Hikmah dan pilih lokasi misi yang terbuka (dimulai dari Misi 1).</li>
-          <li>Pelajari materi dengan mengklik tab informasi atau kartu puasa sunah.</li>
-          <li>Selesaikan tantangan interaktif (pilihan ganda, benar-salah, mencocokkan, atau mengelompokkan) untuk membuka tombol klaim lencana.</li>
-          <li>Kumpulkan 5 Lencana Hikmah untuk menyelesaikan seluruh ekspedisi!</li>
-        </ol>
-        <p><strong>Pendamping Petualang Kaka:</strong></p>
-        <ul style="padding-left: 20px; margin: 8px 0;">
-          <li>Kaka siap mendampingi penjelajahanmu di setiap pulau dengan narasi dan petunjuk otomatis di setiap misi.</li>
-          <li>Setiap halaman menyajikan ekspresi dan perlengkapan unik Kaka sesuai tema petualangan.</li>
-        </ul>
-      </div>
-      <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
-        <button class="graphic-action-btn" id="help-modal-close" title="Tutup Panduan">
-          <img src="assets/ui/btn-tutup-panduan.png" class="btn-img-asset" alt="Tutup Panduan">
-        </button>
-      </div>
-    </div>
-  </div>
 
   <!-- SCRIPT MODULAR -->
   <script src="js/data.js"></script>
