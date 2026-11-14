@@ -1,0 +1,123 @@
+/**
+ * EKSPEDISI PUASA SUNAH – Petualangan di Pulau Hikmah
+ * CSS Interaktivitas 3D & Karakter Kaka Hidup (kaka-live.css)
+ */
+
+/* Kontainer Interaktif Karakter Kaka - Ukuran Proporsional Sesuai Peta Jelajah */
+.kaka-interactive-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: default !important;
+  pointer-events: none !important;
+  margin-top: 0 !important;
+}
+
+.kaka-interactive-wrap:hover {
+  filter: none !important;
+}
+
+/* Gambar Karakter 3D Kaka - Rasio & Ukuran Selaras dengan Karakter di Peta Jelajah */
+.kaka-img-display,
+.kaka-character-img {
+  width: 100% !important;
+  max-width: 220px !important;
+  max-height: 280px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5)) !important;
+  transform-origin: bottom center;
+  animation: none !important;
+  transform: none !important;
+  pointer-events: none !important;
+  display: block;
+}
+
+/* Overlay Kelopak Mata Dihilangkan agar Tidak Berkedip Mengganggu */
+.kaka-eyelid-overlay {
+  display: none !important;
+}
+
+/* Indikator Suara / Voice Waves di dekat Kaka */
+.kaka-voice-waves {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 24px;
+  padding: 4px 8px;
+  background: rgba(17, 24, 32, 0.75);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--color-gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.speaking .kaka-voice-waves {
+  opacity: 1;
+}
+
+.voice-wave-bar {
+  width: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  animation: waveMotion 0.8s ease-in-out infinite alternate;
+}
+
+.voice-wave-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+.voice-wave-bar:nth-child(2) { height: 16px; animation-delay: 0.3s; }
+.voice-wave-bar:nth-child(3) { height: 10px; animation-delay: 0.2s; }
+.voice-wave-bar:nth-child(4) { height: 18px; animation-delay: 0.4s; }
+
+/* Tombol Voice Over di bawah Karakter Dihilangkan Total */
+.kaka-vo-btn {
+  display: none !important;
+}
+
+/* Pedestal di Bawah Kaki Kaka */
+.kaka-pedestal {
+  width: 160px;
+  height: 18px;
+  background: radial-gradient(ellipse at center, rgba(0, 137, 123, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  margin-top: -8px;
+  filter: blur(2px);
+}
+
+/* Mematikan Segala Bentuk Pembesaran/Pengecilan Cepat & Kedipan */
+.speaking .kaka-img-display {
+  animation: none !important;
+  transform: none !important;
+}
+
+.kaka-jump {
+  animation: none !important;
+  transform: none !important;
+}
+
+@keyframes waveMotion {
+  0% { height: 6px; }
+  100% { height: 24px; }
+}
+
+/* Ilustrasi Cerita Alur (Story Illustration Panels) */
+.story-scene-img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 14px;
+  border: 2px solid var(--color-gold);
+  transition: transform 0.3s ease;
+}
+
+.story-scene-img:hover {
+  transform: scale(1.02);
+}

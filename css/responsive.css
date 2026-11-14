@@ -1,0 +1,119 @@
+/**
+ * EKSPEDISI PUASA SUNAH – Petualangan di Pulau Hikmah
+ * CSS Responsif: Adaptasi Laptop, Tablet, & Smartphone (responsive.css)
+ */
+
+/* Layar Sedang & Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .screen-body {
+    padding: 16px 20px;
+    gap: 16px;
+  }
+
+  .kaka-companion-col {
+    width: 210px !important;
+  }
+
+  .kaka-character-img,
+  .kaka-img-display {
+    max-height: 250px !important;
+    max-width: 200px !important;
+  }
+
+  .main-content-panel {
+    padding: 20px 24px;
+  }
+
+  .puasa-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .zone-nav-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+/* Tablet Kecil & Smartphone (<= 768px) */
+@media (max-width: 768px) {
+  #app-viewport {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #app-stage {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .screen-view {
+    position: relative;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .screen-body {
+    flex-direction: column-reverse;
+    padding: 12px 14px;
+    overflow-y: visible;
+  }
+
+  .kaka-companion-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .kaka-character-img,
+  .kaka-img-display {
+    max-height: 200px !important;
+    max-width: 160px !important;
+  }
+
+  .kaka-speech-bubble {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+  }
+
+  .puasa-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-nav-container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .map-header-controls {
+    gap: 8px;
+  }
+
+  .header-circle-btn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .map-progress-indicator {
+    height: 38px;
+    min-width: 38px;
+    padding: 0 10px;
+    font-size: 0.85rem;
+  }
+
+  .buckets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .matching-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .header-title {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,579 @@
+/**
+ * EKSPEDISI PUASA SUNAH – Petualangan di Pulau Hikmah
+ * CSS Layout: Stage 16:9, Header, & Struktur Layar (layout.css)
+ */
+
+/* Kontainer Utama 16:9 */
+#app-viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #2c3e50 0%, #111920 100%);
+  overflow: hidden;
+}
+
+#app-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16 / 9;
+  max-height: 100vh;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Manajemen Layar */
+.screen-view {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.screen-view.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Header Aplikasi */
+.app-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: linear-gradient(180deg, rgba(17, 24, 32, 0.85) 0%, rgba(17, 24, 32, 0.2) 100%);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+  color: var(--text-light);
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-user-tag {
+  font-size: 0.85rem;
+  color: #cfd8dc;
+}
+
+/* Area Konten Layar */
+.screen-body {
+  flex: 1;
+  display: flex;
+  padding: 20px 32px;
+  gap: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Custom Slim Scrollbar */
+.main-content-panel::-webkit-scrollbar,
+.screen-body::-webkit-scrollbar {
+  width: 6px;
+}
+.main-content-panel::-webkit-scrollbar-track,
+.screen-body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.main-content-panel::-webkit-scrollbar-thumb,
+.screen-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 137, 123, 0.35);
+  border-radius: 4px;
+}
+.main-content-panel::-webkit-scrollbar-thumb:hover,
+.screen-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 137, 123, 0.65);
+}
+
+/* Tata Letak Kaka di Samping */
+.kaka-companion-col {
+  width: 230px !important;
+  max-width: 230px !important;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+  gap: 8px;
+}
+
+.kaka-character-img {
+  width: 100% !important;
+  max-width: 220px !important;
+  max-height: 280px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5)) !important;
+  pointer-events: none !important;
+  display: block;
+}
+
+.kaka-speech-bubble {
+  background: var(--bg-card);
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: auto;
+  margin-bottom: 0;
+  position: relative;
+  border-left: 5px solid var(--color-primary);
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.kaka-speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 8px 0;
+  border-style: solid;
+  border-color: var(--bg-card) transparent;
+}
+
+/* Area Utama Konten */
+.main-content-panel {
+  flex: 1;
+  background: var(--bg-card-glass);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* PETA INTERAKTIF LAYAR (SCR-004) */
+.map-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.map-pin {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+}
+
+.map-pin:hover {
+  transform: scale(1.15) translateY(-6px);
+  z-index: 20;
+}
+
+.pin-marker-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--color-gold);
+  font-size: 1.6rem;
+  transition: all 0.2s ease;
+}
+
+.map-pin.locked .pin-marker-circle {
+  background: #78909c;
+  border-color: #546e7a;
+  filter: grayscale(0.8);
+}
+
+.map-pin.completed .pin-marker-circle {
+  background: #e8f5e9;
+  border-color: var(--color-success);
+}
+
+.pin-label-box {
+  background: rgba(17, 24, 32, 0.88);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 6px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pin-status-label.ready { color: var(--color-gold-light); }
+.pin-status-label.completed { color: #81c784; }
+.pin-status-label.locked { color: #b0bec5; }
+
+/* Khusus Layar Cover (SCR-001): Tombol Mulai Tepat di Tengah Halaman */
+.cover-screen-body {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#cover-start-btn {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.7));
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.25s ease !important;
+}
+
+#cover-start-btn .btn-img-asset {
+  width: 320px;
+  max-width: 85vw;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#cover-start-btn:hover {
+  transform: scale(1.06) !important;
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.85)) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+#cover-start-btn:active {
+  transform: scale(0.96) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+#cover-start-btn:focus,
+#cover-start-btn:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+/* Standarisasi Tombol Berbasis Gambar Visual (Graphic Buttons) */
+.graphic-action-btn {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.graphic-action-btn:hover {
+  transform: scale(1.05) translateY(-2px) !important;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.5)) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.graphic-action-btn:active {
+  transform: scale(0.97) translateY(1px) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.graphic-action-btn:focus,
+.graphic-action-btn:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.graphic-action-btn:disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+  filter: grayscale(80%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) !important;
+  transform: none !important;
+}
+
+.btn-img-asset {
+  pointer-events: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* PENYEGARAN PIN PETA JELAJAH: ikon PNG lebih besar, kontras, dan mudah disentuh */
+.map-canvas-container .map-pin {
+  min-width: 108px;
+  gap: 2px;
+  transform: translateX(-50%);
+  transform-origin: center top;
+  z-index: 12;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.map-canvas-container .map-pin:hover,
+.map-canvas-container .map-pin:focus-visible {
+  transform: translateX(-50%) translateY(-5px) scale(1.07);
+  z-index: 30;
+  outline: none;
+}
+
+.map-canvas-container .pin-marker-circle {
+  width: 82px;
+  height: 82px;
+  min-width: 82px;
+  border: 4px solid #f5d36d;
+  background: linear-gradient(145deg, #fffef5 0%, #e8f5df 100%);
+  box-shadow: 0 7px 0 rgba(26, 77, 54, .22), 0 9px 20px rgba(10, 42, 35, .38),
+              inset 0 2px 5px rgba(255,255,255,.95);
+}
+
+.map-canvas-container .map-pin-icon {
+  display: block;
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(22, 54, 42, .18));
+  pointer-events: none;
+}
+
+.map-canvas-container .map-pin.locked .pin-marker-circle {
+  background: linear-gradient(145deg, #e5e8e2, #aebbb1);
+  border-color: #9aa99b;
+}
+
+.map-canvas-container .map-pin.locked .map-pin-icon {
+  filter: grayscale(.45) drop-shadow(0 2px 2px rgba(22,54,42,.16));
+  opacity: .82;
+}
+
+.map-canvas-container .map-pin.completed .pin-marker-circle,
+.map-canvas-container .map-pin.unlocked .pin-marker-circle {
+  border-color: #27834e;
+}
+
+.map-canvas-container .pin-label-box {
+  margin-top: 9px;
+  padding: 8px 13px;
+  min-height: 34px;
+  max-width: 220px;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 226, 133, .9);
+  border-radius: 13px;
+  background: linear-gradient(135deg, rgba(12, 45, 43, .96), rgba(20, 68, 53, .94));
+  color: #fffdf0;
+  font-size: .88rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: .1px;
+  white-space: normal;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(8, 31, 27, .38);
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+.map-canvas-container .materi-pin .pin-marker-circle {
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
+  background: linear-gradient(145deg, #fff9dc, #cce9c9);
+  border: 4px solid #f2c94c;
+  box-shadow: 0 0 0 5px rgba(255, 244, 190, .35),
+              0 7px 0 rgba(24, 83, 50, .25),
+              0 10px 22px rgba(10, 42, 35, .4);
+}
+
+.map-canvas-container .materi-pin .map-pin-icon {
+  width: 72px;
+  height: 72px;
+}
+
+.map-canvas-container .materi-pin .materi-label {
+  margin-top: 9px;
+  padding: 8px 19px;
+  min-height: 36px;
+  border: 1px solid #ffe28a;
+  background: linear-gradient(135deg, #1d713f, #104c35);
+  color: #fff8d8;
+  font-size: .96rem;
+  letter-spacing: .8px;
+}
+
+.map-canvas-container .pin-status-label {
+  font-size: .78em;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .map-canvas-container .map-pin { min-width: 88px; }
+  .map-canvas-container .pin-marker-circle {
+    width: 68px; height: 68px; min-width: 68px;
+  }
+  .map-canvas-container .map-pin-icon { width: 54px; height: 54px; }
+  .map-canvas-container .materi-pin .pin-marker-circle {
+    width: 74px; height: 74px; min-width: 74px;
+  }
+  .map-canvas-container .materi-pin .map-pin-icon { width: 60px; height: 60px; }
+  .map-canvas-container .pin-label-box {
+    max-width: 160px;
+    min-height: 30px;
+    padding: 6px 9px;
+    font-size: .72rem;
+  }
+  .map-canvas-container .materi-pin .materi-label {
+    min-height: 32px;
+    font-size: .82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-canvas-container .map-pin { min-width: 76px; }
+  .map-canvas-container .pin-marker-circle {
+    width: 58px; height: 58px; min-width: 58px;
+    border-width: 3px;
+  }
+  .map-canvas-container .map-pin-icon { width: 46px; height: 46px; }
+  .map-canvas-container .materi-pin .pin-marker-circle {
+    width: 64px; height: 64px; min-width: 64px;
+  }
+  .map-canvas-container .materi-pin .map-pin-icon { width: 52px; height: 52px; }
+  .map-canvas-container .pin-label-box { max-width: 135px; font-size: .66rem; }
+}
+
+/* Menggeser tombol Misi 1 sedikit ke tengah */
+.map-canvas-container .map-pin:nth-of-type(2) {
+  left: calc(var(--mission-1-left, 18%) + 5%) !important;
+}
+
+
+/* ANIMASI TOMBOL PETA JELAJAH */
+
+@keyframes questFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-7px) scale(1.06);
+  }
+}
+
+@keyframes questGlow {
+  0%, 100% {
+    filter: drop-shadow(0 3px 5px rgba(255,193,7,.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 17px rgba(255,215,0,.9));
+  }
+}
+
+.map-canvas-container .map-pin
+.pin-marker-circle {
+  animation: questFloat 2.8s ease-in-out infinite,
+             questGlow 2.8s ease-in-out infinite;
+}
+
+.map-canvas-container .map-pin:nth-child(2)
+.pin-marker-circle {
+  animation-delay: .2s;
+}
+
+.map-canvas-container .map-pin:nth-child(3)
+.pin-marker-circle {
+  animation-delay: .5s;
+}
+
+.map-canvas-container .map-pin:nth-child(4)
+.pin-marker-circle {
+  animation-delay: .8s;
+}
+
+/* ANIMASI TOMBOL MULAI */
+
+@keyframes startPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 5px 10px rgba(255,193,7,.35));
+  }
+  50% {
+    transform: scale(1.09);
+    filter: drop-shadow(0 0 24px rgba(255,215,0,.9));
+  }
+}
+
+#cover-start-btn .btn-img-asset {
+  animation: startPulse 2s ease-in-out infinite;
+}
+
+/* Aksesibilitas: kurangi animasi jika diminta pengguna */
+
+@media (prefers-reduced-motion: reduce) {
+  .map-canvas-container .map-pin .pin-marker-circle,
+  #cover-start-btn .btn-img-asset {
+    animation: none !important;
+  }
+}

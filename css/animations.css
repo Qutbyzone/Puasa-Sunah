@@ -1,0 +1,93 @@
+/**
+ * EKSPEDISI PUASA SUNAH – Petualangan di Pulau Hikmah
+ * CSS Animasi: Transisi & Efek Visual Ramah Anak (animations.css)
+ */
+
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulseReady {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0.85);
+    transform: scale(1.04);
+  }
+}
+
+@keyframes shakeWrong {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.pulse-ready {
+  animation: pulseReady 1.6s infinite ease-in-out;
+}
+
+@keyframes graphicPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.65));
+  }
+  50% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.85));
+  }
+}
+
+.graphic-pulse-btn {
+  animation: graphicPulse 2.2s infinite ease-in-out;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Memastikan elemen berbasis gambar tidak memiliki outline/kotak kuning */
+.graphic-action-btn,
+.graphic-action-btn.pulse-ready {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.shake-wrong {
+  animation: shakeWrong 0.5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}

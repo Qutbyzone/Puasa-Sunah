@@ -1,0 +1,759 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekspedisi Puasa Sunah – Petualangan di Pulau Hikmah</title>
+
+  <!-- Modular Stylesheets (100% Offline & Bebas CDN) -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/kaka-live.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- VIEWPORT TAMPILAN UTAMA -->
+  <div id="app-viewport">
+    <div id="app-stage">
+
+      <!-- ========================================== -->
+      <!-- LAYAR 01: COVER PEMBUKA (SCR-001)           -->
+      <!-- ========================================== -->
+      <section class="screen-view active" id="SCR-001" style="background-image: url('assets/backgrounds/bg-cover.jpg');">
+        <audio id="cover-voice-player" src="assets/audio/narration/vo-01-cover.wav" autoplay preload="auto"></audio>
+        <div class="screen-body cover-screen-body">
+          <button id="cover-start-btn" class="graphic-action-btn graphic-pulse-btn" title="Mulai Permainan">
+            <img src="assets/ui/btn-mulai-permainan.png" alt="Mulai Permainan" class="btn-img-asset">
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 02: IDENTITAS MURID (SCR-002)         -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-002" style="background-image: url('assets/backgrounds/bg-dermaga.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <span class="header-title">Dermaga Pendaftaran Penjelajah</span>
+          </div>
+          <div class="header-right">
+            <button class="icon-btn header-help-btn" title="Bantuan" aria-label="Bantuan">
+              <img src="assets/icons/icon-bantuan.png" class="header-icon-img" alt="Bantuan">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body" style="align-items: center; justify-content: center; gap: 40px;">
+          <div class="main-content-panel" style="max-width: 540px; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 8px;">🧭</div>
+            <h2 style="color: var(--color-primary-dark); margin-bottom: 8px;">Buku Catatan Ekspedisi</h2>
+            <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 24px;">
+              Sebelum perahu kita berlayar, tuliskan nama panggilan hebatmu!
+            </p>
+
+            <form id="identitas-form">
+              <div style="margin-bottom: 24px;">
+                <input type="text" id="student-name-input" placeholder="Ketik nama panggilanmu di sini..." maxlength="25" required
+                  style="width: 100%; padding: 16px 20px; font-size: 1.2rem; border: 2px solid var(--color-primary); border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm);">
+              </div>
+              <button type="submit" class="graphic-action-btn" style="width: 100%; justify-content: center;">
+                <img src="assets/ui/btn-buka-peta.png" alt="Buka Peta & Berangkat!" class="btn-img-asset" style="width: 310px; max-width: 90%;">
+              </button>
+            </form>
+          </div>
+
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble" style="background: #ffffff; color: #1e293b; border-left-color: var(--color-gold);">
+              <strong>Assalamu'alaikum sahabat penjelajah!</strong> Aku Kaka, pemandumu di Pulau Hikmah yang penuh keajaiban ini! Sebelum perahu kita berlayar, tuliskan nama panggilan hebatmu di buku catatan ekspedisi ya!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-pendaftaran.png" class="kaka-img-display" alt="Kaka Pendaftaran">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 03: CERITA PEMBUKA (SCR-003)          -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-003" style="background-image: url('assets/backgrounds/bg-kisah.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <span class="header-title">Kisah Awal Pulau Hikmah</span>
+          </div>
+          <div class="header-right">
+            <button class="graphic-action-btn" id="story-skip-btn" title="Lewati Cerita">
+              <img src="assets/ui/btn-lewati-cerita.png" alt="Lewati Cerita" class="btn-img-asset" style="width: 135px;">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body" style="align-items: center; justify-content: center; gap: 36px;">
+          <div class="main-content-panel story-content-panel" style="max-width: 680px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 8px 32px rgba(0,0,0,0.5);">
+            
+            <!-- Panel Gambar Ilustrasi Cerita -->
+            <img id="story-scene-img" src="assets/maps/cerita-1-dermaga.jpg" class="story-scene-img" alt="Ilustrasi Cerita" style="border-radius: var(--radius-md); box-shadow: 0 4px 16px rgba(0,0,0,0.5);">
+
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; margin-top: 14px;">
+              <h3 id="story-dialog-title" style="color: var(--color-gold-light); font-size: 1.3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.85);">Pendaratan di Dermaga</h3>
+              <button class="graphic-action-btn story-replay-btn" onclick="window.MPI_NAV.replayStoryNarration()" title="Putar Narasi">
+                <img src="assets/ui/btn-putar-narasi.png" alt="Putar Narasi" class="btn-img-asset" style="width: 140px;">
+              </button>
+            </div>
+
+            <div id="story-dialog-text" style="font-size: 1.15rem; line-height: 1.6; color: #ffffff; min-height: 80px; padding: 16px; background: rgba(0, 0, 0, 0.45); border-radius: var(--radius-md); border-left: 5px solid var(--color-gold); text-shadow: 0 1px 3px rgba(0,0,0,0.9); backdrop-filter: blur(6px);">
+              <!-- Teks dinamis dari js/navigation.js -->
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+              <span style="font-size: 0.85rem; color: #eceff1; text-shadow: 0 1px 2px rgba(0,0,0,0.85);">Dengarkan narasi atau klik Lanjut Cerita!</span>
+              <button class="graphic-action-btn" id="story-next-btn" title="Lanjut Cerita">
+                <img src="assets/ui/btn-lanjut-cerita.png" alt="Lanjut Cerita" class="btn-img-asset" style="width: 175px;">
+              </button>
+            </div>
+          </div>
+
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble" style="background: rgba(0, 0, 0, 0.6); color: #ffffff; border-left-color: var(--color-gold); backdrop-filter: blur(8px);">
+              Dengarkan ceritaku ya! Di pulau ini ada 5 lencana rahasia!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-kisah.png" class="kaka-img-display" alt="Kaka Kisah">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 04: PETA PULAU HIKMAH (SCR-004)       -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-004" style="background-image: url('assets/maps/peta-pulau.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <span class="header-title">🗺️ Peta Jelajah Pulau Hikmah</span>
+            <span class="header-user-tag">• Penjelajah: <strong class="display-username">Siswa</strong></span>
+          </div>
+          <div class="header-right map-header-controls">
+            <!-- 1. Indikator Progres -->
+            <div class="map-progress-indicator" id="map-progress-indicator" title="Progres Ekspedisi: 0 dari 5 Lencana" aria-label="Progres Ekspedisi">
+              <span id="map-progress-text">0/5</span>
+            </div>
+
+            <!-- 2. Tombol Lencana -->
+            <button class="header-circle-btn gold-circle-btn" id="map-btn-lencana" title="Koleksi Lencana Hikmah (SCR-011)" aria-label="Koleksi Lencana">
+              <span class="circle-btn-icon">🏆</span>
+            </button>
+
+            <!-- 3. Tombol Rapor Ekspedisi -->
+            <button class="header-circle-btn gold-circle-btn" id="map-btn-rapor" title="Rapor Ekspedisi (SCR-010)" aria-label="Rapor Ekspedisi">
+              <span class="circle-btn-icon">📋</span>
+            </button>
+
+            <!-- 4. Tombol Informasi -->
+            <button class="header-circle-btn gold-circle-btn" id="map-btn-info" title="Informasi & Panduan Ekspedisi" aria-label="Informasi">
+              <span class="circle-btn-icon">❓</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Area Kanvas Peta dengan 5 Pin Lokasi Interaktif + Pin Materi -->
+        <div class="map-canvas-container" style="flex: 1; position: relative;">
+          
+          <!-- TOMBOL MATERI PEMBELAJARAN (Menuju SCR-013) -->
+          <div class="map-pin unlocked materi-pin" id="map-materi-btn" role="button" tabindex="0" aria-label="Buka Materi Pembelajaran" style="left: 20.5%; top: 38%;" title="Buka Materi Pembelajaran">
+            <div class="pin-marker-circle materi-circle"><img src="assets/map-icons/materi-book.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
+            <div class="pin-label-box materi-label">
+              <span>MATERI</span>
+            </div>
+          </div>
+
+          <!-- PIN 1: Pantai Pengetahuan (Bawah Kiri) -->
+          <div class="map-pin unlocked" data-mission="1" role="button" tabindex="0" aria-label="Misi 1: Pantai Pengetahuan" style="left: 18%; top: 62%;">
+            <div class="pin-marker-circle"><img src="assets/map-icons/misi1-beach.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
+            <div class="pin-label-box">
+              <span>Pantai Pengetahuan</span>
+              <span class="pin-status-label ready">🚩 Terbuka</span>
+            </div>
+          </div>
+
+          <!-- PIN 2: Hutan Kalender (Kanan Bawah) -->
+          <div class="map-pin locked" data-mission="2" role="button" tabindex="0" aria-label="Misi 2: Hutan Kalender" style="left: 72%; top: 68%;">
+            <div class="pin-marker-circle"><img src="assets/map-icons/misi2-calendar.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
+            <div class="pin-label-box">
+              <span>Hutan Kalender</span>
+              <span class="pin-status-label locked">🔒 Terkunci</span>
+            </div>
+          </div>
+
+          <!-- PIN 3: Gua Hadis (Kanan Atas / Tebing Batu) -->
+          <div class="map-pin locked" data-mission="3" role="button" tabindex="0" aria-label="Misi 3: Gua Hadis" style="left: 78%; top: 32%;">
+            <div class="pin-marker-circle"><img src="assets/map-icons/misi3-lantern.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
+            <div class="pin-label-box">
+              <span>Gua Hadis</span>
+              <span class="pin-status-label locked">🔒 Terkunci</span>
+            </div>
+          </div>
+
+          <!-- PIN 4: Desa Inspirasi (Lembah Tengah) -->
+          <div class="map-pin locked" data-mission="4" role="button" tabindex="0" aria-label="Misi 4: Desa Inspirasi" style="left: 48%; top: 52%;">
+            <div class="pin-marker-circle"><img src="assets/map-icons/misi4-village.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
+            <div class="pin-label-box">
+              <span>Desa Inspirasi</span>
+              <span class="pin-status-label locked">🔒 Terkunci</span>
+            </div>
+          </div>
+
+          <!-- PIN 5: Puncak Kebiasaan (Puncak Gunung Tertinggi) -->
+          <div class="map-pin locked" data-mission="5" role="button" tabindex="0" aria-label="Misi 5: Puncak Kebiasaan" style="left: 46%; top: 18%;">
+            <div class="pin-marker-circle"><img src="assets/map-icons/misi5-mountain.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
+            <div class="pin-label-box">
+              <span>Puncak Kebiasaan</span>
+              <span class="pin-status-label locked">🔒 Terkunci</span>
+            </div>
+          </div>
+
+          <!-- Kaka di Pojok Bawah Peta -->
+          <div style="position: absolute; bottom: 20px; left: 24px; width: 220px; z-index: 15;">
+            <div class="kaka-interactive-wrap">
+              <img src="assets/characters/kaka-semangat.png" style="width: 100%; max-height: 280px; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.5));" alt="Kaka">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 05: MISI 1 — PANTAI PENGETAHUAN      -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-005" style="background-image: url('assets/backgrounds/bg-pantai.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Misi 1: Pantai Pengetahuan (Hakikat Puasa)</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 8px; align-items: center;">
+            <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+              <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Kembali ke Peta">
+            </button>
+            <button class="graphic-action-btn" id="m1-claim-btn" disabled title="Klaim Lencana 1">
+              <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Klaim Lencana 1">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble">
+              Mari pahami pengertian puasa sunah dan perbedaannya dengan puasa wajib Ramadan!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-misi1.png" class="kaka-img-display" alt="Kaka Misi 1">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+
+          <div class="main-content-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <h4 style="color: var(--color-primary-dark);">Uji Pemahaman Pantai Pengetahuan</h4>
+              <div style="display: flex; gap: 8px;">
+                <button class="nav-btn secondary-btn m1-act-switch-btn active" data-act="pg" style="padding: 6px 12px; font-size: 0.85rem;">Pilihan Ganda</button>
+                <button class="nav-btn secondary-btn m1-act-switch-btn" data-act="tf" style="padding: 6px 12px; font-size: 0.85rem;">Benar / Salah</button>
+                <button class="nav-btn secondary-btn m1-act-switch-btn" data-act="match" style="padding: 6px 12px; font-size: 0.85rem;">Mencocokkan</button>
+              </div>
+            </div>
+
+            <div id="m1-activity-area"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 06: MISI 2 — HUTAN KALENDER          -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-006" style="background-image: url('assets/backgrounds/bg-hutan.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Misi 2: Hutan Kalender (8 Jenis Puasa Sunah)</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 8px; align-items: center;">
+            <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+              <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Kembali ke Peta">
+            </button>
+            <button class="graphic-action-btn" id="m2-claim-btn" disabled title="Klaim Lencana 2">
+              <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Klaim Lencana 2">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble">
+              Pohon-pohon ini menyimpan jadwal 8 puasa sunah! Kerjakan tantangan kalender di samping ya!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-misi2.png" class="kaka-img-display" alt="Kaka Misi 2">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+
+          <div class="main-content-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <h4 style="color: var(--color-primary-dark);">🎯 Tantangan Hutan Kalender</h4>
+              <div style="display: flex; gap: 8px;">
+                <button class="nav-btn secondary-btn m2-act-switch-btn active" data-act="group" style="padding: 6px 12px; font-size: 0.85rem;">Mengelompokkan</button>
+                <button class="nav-btn secondary-btn m2-act-switch-btn" data-act="match" style="padding: 6px 12px; font-size: 0.85rem;">Cocokkan Waktu</button>
+              </div>
+            </div>
+
+            <div id="m2-activity-area"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 07: MISI 3 — GUA HADIS               -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-007" style="background-image: url('assets/backgrounds/bg-gua.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Misi 3: Gua Hadis (Ketentuan & Keutamaan)</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 8px; align-items: center;">
+            <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+              <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Kembali ke Peta">
+            </button>
+            <button class="graphic-action-btn" id="m3-claim-btn" disabled title="Klaim Lencana 3">
+              <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Klaim Lencana 3">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble">
+              Cahaya lentera menyingkap kemudahan niat dan pintu surga Ar-Rayyan bagi orang yang berpuasa!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-misi3.png" class="kaka-img-display" alt="Kaka Misi 3">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+
+          <div class="main-content-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <h4 style="color: var(--color-primary-dark);">Tantangan Lentera Hadis</h4>
+              <div style="display: flex; gap: 8px;">
+                <button class="nav-btn secondary-btn m3-act-switch-btn active" data-act="pg" style="padding: 6px 12px; font-size: 0.85rem;">Prasasti Pilihan Ganda</button>
+                <button class="nav-btn secondary-btn m3-act-switch-btn" data-act="match" style="padding: 6px 12px; font-size: 0.85rem;">Cocokkan Keutamaan</button>
+              </div>
+            </div>
+
+            <div id="m3-activity-area"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 08: MISI 4 — DESA INSPIRASI          -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-008" style="background-image: url('assets/backgrounds/bg-desa.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Misi 4: Desa Inspirasi (Nilai & Sikap Bijak)</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 8px; align-items: center;">
+            <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+              <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Kembali ke Peta">
+            </button>
+            <button class="graphic-action-btn" id="m4-claim-btn" disabled title="Klaim Lencana 4">
+              <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Klaim Lencana 4">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble">
+              Puasa melatih kita menjadi anak yang ikhlas, santun, dan peduli kepada sesama!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-misi4.png" class="kaka-img-display" alt="Kaka Misi 4">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+
+          <div class="main-content-panel">
+            <h4 style="color: var(--color-primary-dark); margin-bottom: 14px;">Studi Kasus: Pilih Tindakan Bijak</h4>
+            <div id="m4-activity-area"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 09: MISI 5 — PUNCAK KEBIASAAN        -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-009" style="background-image: url('assets/backgrounds/bg-puncak.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Misi 5: Puncak Kebiasaan (Evaluasi Akhir Penjelajah)</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 8px; align-items: center;">
+            <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+              <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Kembali ke Peta">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble">
+              Ini ujian terakhir dari seluruh perjalananmu! Jawab 15 soal untuk membuktikan ilmumu!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div><div class="voice-wave-bar"></div><div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-misi5.png" class="kaka-img-display" alt="Kaka Misi 5">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+
+          <div class="main-content-panel" id="m5-quiz-container">
+            <!-- Dinamis via js/quiz.js -->
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 10: HASIL EKSPEDISI (SCR-010)        -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-010" style="background-image: url('assets/backgrounds/bg-rapor.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Rapor Pencapaian Penjelajah Pulau Hikmah</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 10px;">
+            <button class="nav-btn primary-btn btn-back-to-map" style="padding: 6px 14px; font-size: 0.85rem;">🗺️ Kembali ke Peta</button>
+            <button class="nav-btn secondary-btn" id="print-report-btn" style="padding: 6px 14px; font-size: 0.85rem;">🖨️ Cetak</button>
+          </div>
+        </header>
+
+        <div class="screen-body" style="align-items: center; justify-content: center; gap: 32px;">
+          <div class="main-content-panel" style="max-width: 680px; text-align: center; padding: 24px 32px;">
+            <div style="font-size: 2.6rem; margin-bottom: 4px;">📜</div>
+            <h2 style="color: var(--color-primary-dark); font-size: 1.5rem; margin-bottom: 2px;">SERTIFIKAT PENJELAJAH SEJATI</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Diberikan dengan penuh kebanggaan kepada:</p>
+            
+            <h1 id="report-student-name" style="color: #004d40; font-size: 1.8rem; margin-bottom: 6px; border-bottom: 2px solid var(--color-gold); display: inline-block; padding-bottom: 4px;">
+              Nama Murid
+            </h1>
+
+            <div style="margin: 14px 0; background: #f8fafc; padding: 14px; border-radius: var(--radius-md); border: 2px dashed #b0bec5;">
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Skor Evaluasi Akhir:</div>
+              <div id="report-final-score" style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary-dark); line-height: 1.2;">100 / 100</div>
+              <div id="report-predicate" style="font-size: 1.05rem; font-weight: 700; margin-top: 4px;">Penjelajah Utama (A+)</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <h4 style="color: var(--text-muted); margin-bottom: 8px; font-size: 0.88rem;">LENCANA YANG TELAH DIPEROLEH:</h4>
+              <div id="report-badges-grid" style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; min-height: 48px; align-items: center;"></div>
+            </div>
+
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center;">
+              <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+                <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" alt="Kembali ke Peta">
+              </button>
+              <button class="graphic-action-btn btn-open-badges" title="Koleksi Lencana">
+                <img src="assets/ui/btn-koleksi-lencana.png" class="btn-img-asset" alt="Koleksi Lencana">
+              </button>
+              <button class="graphic-action-btn" id="to-reflection-btn" title="Refleksi & Doa">
+                <img src="assets/ui/btn-refleksi-doa.png" class="btn-img-asset" alt="Refleksi & Doa">
+              </button>
+            </div>
+
+            <div class="report-creator-credit" style="margin-top: 14px; padding-top: 8px; border-top: 1px dashed #b0bec5; font-size: 0.82rem; color: #546e7a;">
+              Dikembangkan oleh: <strong>Andriansyah, S.Pd.I.</strong>
+            </div>
+          </div>
+
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble" style="border-left-color: var(--color-gold);">
+              Alhamdulillah! Nilai dan pencapaianmu sangat membanggakan!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <img src="assets/characters/kaka-rapor.png" class="kaka-img-display" alt="Kaka Rapor">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 11: KOLEKSI 5 LENCANA (SCR-011)      -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-011" style="background-image: url('assets/backgrounds/bg-lencana.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt=""></button>
+            <span class="header-title">🏆 Ruang Koleksi Lencana Hikmah</span>
+          </div>
+          <div class="header-right">
+            <button class="nav-btn primary-btn btn-back-to-map" style="padding: 8px 18px; font-size: 0.9rem;">🗺️ Kembali ke Peta</button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <div class="main-content-panel" style="width: 100%;">
+            <div style="text-align: center; margin-bottom: 20px;">
+              <h2 style="color: var(--color-primary-dark);">Rak Pusaka Lencana Pulau Hikmah</h2>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">Setiap lencana adalah bukti penguasaan materi dan tekad beribadahmu.</p>
+            </div>
+
+            <div id="badges-collection-grid" class="badges-collection-grid"></div>
+
+            <div style="display: flex; justify-content: center; margin-top: 24px;">
+              <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+                <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" alt="Kembali ke Peta">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 12: REFLEKSI & PENUTUP (SCR-012)     -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-012" style="background-image: url('assets/backgrounds/bg-refleksi.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta"><img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Peta"></button>
+            <span class="header-title">Dermaga Kepulangan: Refleksi & Doa</span>
+          </div>
+          <div class="header-right" style="display: flex; gap: 8px; align-items: center;">
+            <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+              <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" style="height: 38px; width: auto;" alt="Kembali ke Peta">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body" style="align-items: center; justify-content: center; gap: 40px;">
+          <div class="main-content-panel" style="max-width: 650px; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 8px;">🌟</div>
+            <h2 id="reflection-greeting" style="color: var(--color-primary-dark); margin-bottom: 12px;">
+              Alhamdulillah! Petualangan di Pulau Hikmah Telah Paripurna.
+            </h2>
+            <p style="color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
+              Ilmu tentang puasa sunah bukan hanya untuk dihafal di sekolah, melainkan untuk diamalkan dengan ikhlas demi meraih kecintaan Allah Swt.
+            </p>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: var(--radius-md); border-left: 5px solid var(--color-success); text-align: left; margin-bottom: 24px;">
+              <h4 style="color: var(--color-success); margin-bottom: 8px;">Tekad Penjelajah Sejati:</h4>
+              <ul style="padding-left: 20px; color: #2e7d32; line-height: 1.6; font-size: 0.95rem;">
+                <li>Mencoba mengamalkan puasa sunah semampu kita (misal: puasa Senin atau puasa Arafah).</li>
+                <li>Tetap bersikap ramah dan saling menghormati kepada teman yang belum berpuasa.</li>
+                <li>Menjaga hati dari rasa ingin dipuji (riya') saat beribadah.</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap;">
+              <button class="graphic-action-btn" id="restart-expedition-btn" title="Mulai Petualangan Baru">
+                <img src="assets/ui/btn-mulai-baru.png" class="btn-img-asset" alt="Mulai Petualangan Baru">
+              </button>
+              <button class="graphic-action-btn btn-back-to-map" title="Kembali ke Peta">
+                <img src="assets/ui/btn-kembali-peta.png" class="btn-img-asset" alt="Kembali ke Peta">
+              </button>
+            </div>
+          </div>
+
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble" style="border-left-color: var(--color-primary);">
+              Sampai jumpa lagi sahabat penjelajah! Semoga berkah dan sukses selalu untukmu! Wassalamu'alaikum!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <img src="assets/characters/kaka-refleksi.png" class="kaka-img-display" alt="Kaka Refleksi">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- LAYAR 13: MATERI PEMBELAJARAN (SCR-013)    -->
+      <!-- ========================================== -->
+      <section class="screen-view" id="SCR-013" style="background-image: url('assets/backgrounds/bg-materi.jpg');">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn btn-back-to-map" title="Kembali ke Peta Jelajah" aria-label="Kembali ke Peta">
+              <img src="assets/icons/icon-kembali.png" class="header-icon-img" alt="Kembali">
+            </button>
+            <span class="header-title">📖 Ruang Materi: Ekspedisi Puasa Sunah</span>
+          </div>
+          <div class="header-right">
+            <button class="nav-btn primary-btn btn-back-to-map" style="padding: 8px 18px; font-size: 0.85rem;">
+              🗺️ Kembali ke Peta
+            </button>
+            <button class="icon-btn header-help-btn" title="Bantuan" aria-label="Bantuan">
+              <img src="assets/icons/icon-bantuan.png" class="header-icon-img" alt="Bantuan">
+            </button>
+          </div>
+        </header>
+
+        <div class="screen-body">
+          <!-- Kolom Pendamping Kaka -->
+          <div class="kaka-companion-col">
+            <div class="kaka-speech-bubble" id="materi-kaka-speech" style="border-left-color: var(--color-gold);">
+              Selamat datang di Ruang Materi! Pilih salah satu dari lima zona ekspedisi untuk mempelajari ilmu puasa sunah!
+            </div>
+            <div class="kaka-interactive-wrap">
+              <div class="kaka-voice-waves">
+                <div class="voice-wave-bar"></div>
+                <div class="voice-wave-bar"></div>
+                <div class="voice-wave-bar"></div>
+              </div>
+              <img src="assets/characters/kaka-materi.png" class="kaka-img-display" alt="Kaka Materi">
+              <div class="kaka-pedestal"></div>
+            </div>
+          </div>
+
+          <!-- Panel Konten Materi -->
+          <div class="main-content-panel materi-main-panel">
+            <!-- Navigasi 5 Zona -->
+            <div class="zone-nav-container" id="materi-zone-nav"></div>
+
+            <!-- Konten Zona Aktif -->
+            <div id="materi-zone-content" class="materi-zone-body"></div>
+
+            <!-- Tombol Kembali ke Peta di Bawah -->
+            <div class="materi-bottom-bar" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #cfd8dc; display: flex; justify-content: flex-end;">
+              <button class="nav-btn primary-btn btn-back-to-map">
+                🗺️ Kembali ke Peta Jelajah
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /app-stage -->
+  </div><!-- /app-viewport -->
+
+
+  <!-- ========================================== -->
+  <!-- MODAL: UMPAN BALIK JAWABAN (FEEDBACK)      -->
+  <!-- ========================================== -->
+  <div id="feedback-modal" class="feedback-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h3 id="feedback-title" style="margin-bottom: 12px; font-size: 1.35rem;">Umpan Balik</h3>
+      <p id="feedback-text" style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.5; margin-bottom: 24px;">
+        Penjelasan jawaban kuis.
+      </p>
+      <button class="graphic-action-btn" id="feedback-btn" title="Lanjut">
+        <img src="assets/ui/btn-lanjut-soal.png" class="btn-img-asset" alt="Lanjut">
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MODAL: PERAYAAN LENCANA (CELEBRATION)       -->
+  <!-- ========================================== -->
+  <div id="badge-modal" class="badge-modal" role="dialog" aria-modal="true">
+    <div class="modal-card" style="border: 3px solid var(--color-gold);">
+      <div style="font-size: 2.5rem;">🎉 ✨ 🏆</div>
+      <h2 style="color: var(--color-gold-dark); margin-top: 6px;">LENCANA HIKMAH DIRAIH!</h2>
+      <img id="badge-celebrate-img" src="" alt="Lencana" class="badge-celebrate-img">
+      <h3 id="badge-celebrate-name" style="color: var(--color-primary-dark); margin-bottom: 8px;">Nama Lencana</h3>
+      <p id="badge-celebrate-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 24px;">
+        Deskripsi pencapaian misi.
+      </p>
+      <button class="graphic-action-btn pulse-ready" id="badge-claim-btn" title="Klaim Lencana">
+        <img src="assets/ui/btn-klaim-lencana.png" class="btn-img-asset" alt="Simpan ke Koleksi Lencana">
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MODAL: BANTUAN & PANDUAN                   -->
+  <!-- ========================================== -->
+  <div id="help-modal" class="app-modal" role="dialog" aria-modal="true">
+    <div class="modal-card" style="text-align: left; max-width: 600px;">
+      <h3 style="color: var(--color-primary-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <img src="assets/icons/icon-bantuan.png" style="width: 28px; height: 28px;" alt=""> Panduan Ekspedisi Pulau Hikmah
+      </h3>
+      <div style="font-size: 0.95rem; color: var(--text-main); line-height: 1.6; max-height: 60vh; overflow-y: auto; padding-right: 8px;">
+        <p><strong>Cara Bermain:</strong></p>
+        <ol style="padding-left: 20px; margin: 8px 0 16px;">
+          <li>Tulis nama penjelajahmu di dermaga pendaftaran.</li>
+          <li>Buka Peta Pulau Hikmah dan pilih lokasi misi yang terbuka (dimulai dari Misi 1).</li>
+          <li>Pelajari materi dengan mengklik tab informasi atau kartu puasa sunah.</li>
+          <li>Selesaikan tantangan interaktif (pilihan ganda, benar-salah, mencocokkan, atau mengelompokkan) untuk membuka tombol klaim lencana.</li>
+          <li>Kumpulkan 5 Lencana Hikmah untuk menyelesaikan seluruh ekspedisi!</li>
+        </ol>
+        <p><strong>Pendamping Petualang Kaka:</strong></p>
+        <ul style="padding-left: 20px; margin: 8px 0;">
+          <li>Kaka siap mendampingi penjelajahanmu di setiap pulau dengan narasi dan petunjuk otomatis di setiap misi.</li>
+          <li>Setiap halaman menyajikan ekspresi dan perlengkapan unik Kaka sesuai tema petualangan.</li>
+        </ul>
+      </div>
+      <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <button class="graphic-action-btn" id="help-modal-close" title="Tutup Panduan">
+          <img src="assets/ui/btn-tutup-panduan.png" class="btn-img-asset" alt="Tutup Panduan">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT MODULAR -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/kaka-anim.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/feedback.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/materi.js"></script>
+  <script src="js/missions.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
