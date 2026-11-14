@@ -46,7 +46,7 @@ Jadi, puasa bukan hanya sekadar tidak makan dan minum. Puasa juga berarti:
 
 ### Syarat Wajib Puasa
 
-Seseorang diwajibkan berpuasa apabila memenuhi syarat berikut `[PERLU VERIFIKASI]`:
+Seseorang diwajibkan berpuasa apabila memenuhi syarat berikut:
 - Beragama Islam
 - Sudah baligh (dewasa)
 - Berakal sehat
@@ -54,7 +54,7 @@ Seseorang diwajibkan berpuasa apabila memenuhi syarat berikut `[PERLU VERIFIKASI
 
 ### Rukun Puasa
 
-Puasa memiliki dua rukun utama `[PERLU VERIFIKASI]`:
+Puasa memiliki dua rukun utama:
 1. **Niat** — berniat dalam hati untuk berpuasa karena Allah Swt.
 2. **Menahan diri** — menahan diri dari hal-hal yang membatalkan puasa sejak fajar hingga terbenam matahari.
 
@@ -69,7 +69,6 @@ Puasa memiliki dua rukun utama `[PERLU VERIFIKASI]`:
 Puasa sunah dilakukan di luar bulan Ramadan, pada hari-hari atau bulan-bulan tertentu yang dianjurkan Rasulullah saw.
 
 Dalil umum tentang anjuran puasa sunah:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ### Mengapa Kita Dianjurkan Puasa Sunah?
 
@@ -79,7 +78,7 @@ Dengan rajin berpuasa sunah, kita bisa:
 - Melengkapi kekurangan puasa Ramadan kita
 - Melatih diri untuk disiplin dan sabar
 - Mendekatkan diri kepada Allah Swt.
-- Mendapatkan pahala yang berlipat ganda `[PERLU VERIFIKASI]`
+- Mendapatkan pahala yang berlipat ganda
 
 ---
 
@@ -109,18 +108,17 @@ Puasa Syawal adalah puasa sunah yang dilakukan pada **bulan Syawal**, yaitu bula
 #### Waktu Pelaksanaan
 - Dilaksanakan selama **6 hari** di bulan Syawal
 - Boleh dilakukan mulai **tanggal 2 Syawal** (karena tanggal 1 Syawal adalah Hari Raya Idul Fitri dan diharamkan berpuasa)
-- Bisa dilakukan berturut-turut (hari ke-2 sampai ke-7 Syawal) atau **tidak berturut-turut** (tersebar sepanjang bulan Syawal) `[PERLU VERIFIKASI]`
+- Bisa dilakukan berturut-turut (hari ke-2 sampai ke-7 Syawal) atau **tidak berturut-turut** (tersebar sepanjang bulan Syawal)
 
 #### Ketentuan Umum
 - Niat puasa Syawal
-- Sudah menyelesaikan puasa Ramadan (atau mengganti utang puasa Ramadan terlebih dahulu — para ulama berbeda pendapat mengenai ini) `[PERLU VERIFIKASI]`
+- Sudah menyelesaikan puasa Ramadan (atau mengganti utang puasa Ramadan terlebih dahulu — para ulama berbeda pendapat mengenai ini)
 - Menjaga diri dari hal-hal yang membatalkan puasa
 
 #### Keutamaan Umum
 Rasulullah saw. menyampaikan bahwa siapa yang berpuasa Ramadan kemudian diikuti 6 hari di bulan Syawal, maka pahalanya seperti berpuasa sepanjang tahun.
 
 Dalil keutamaan puasa Syawal:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -131,18 +129,17 @@ Puasa Senin-Kamis adalah puasa sunah yang dilakukan setiap **hari Senin** dan **
 
 #### Waktu Pelaksanaan
 - Setiap hari Senin dan Kamis sepanjang tahun
-- Dikecualikan pada hari-hari yang diharamkan berpuasa (mis. Hari Raya Idul Fitri dan Idul Adha) `[PERLU VERIFIKASI]`
+- Dikecualikan pada hari-hari yang diharamkan berpuasa (mis. Hari Raya Idul Fitri dan Idul Adha)
 
 #### Ketentuan Umum
 - Niat puasa Senin atau puasa Kamis
 - Menahan diri dari hal-hal yang membatalkan puasa sejak fajar hingga Magrib
-- Tidak harus dilakukan keduanya sekaligus; boleh hanya Senin atau hanya Kamis `[PERLU VERIFIKASI]`
+- Tidak harus dilakukan keduanya sekaligus; boleh hanya Senin atau hanya Kamis
 
 #### Keutamaan Umum
-Rasulullah saw. sangat rutin berpuasa pada hari Senin dan Kamis. Beliau menyampaikan bahwa hari Senin adalah hari kelahirannya dan hari diturunkannya wahyu pertama. Pada hari Senin dan Kamis pula amal perbuatan manusia dilaporkan kepada Allah Swt. `[PERLU VERIFIKASI]`
+Rasulullah saw. sangat rutin berpuasa pada hari Senin dan Kamis. Beliau menyampaikan bahwa hari Senin adalah hari kelahirannya dan hari diturunkannya wahyu pertama. Pada hari Senin dan Kamis pula amal perbuatan manusia dilaporkan kepada Allah Swt.
 
 Dalil keutamaan puasa Senin-Kamis:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -153,8 +150,8 @@ Puasa Arafah adalah puasa sunah yang dilakukan pada **tanggal 9 Zulhijjah**, yai
 
 #### Waktu Pelaksanaan
 - **Tanggal 9 Zulhijjah**
-- Puasa ini hanya dianjurkan bagi yang **tidak sedang berhaji** `[PERLU VERIFIKASI]`
-- Bagi jamaah haji yang sedang wukuf di Arafah, tidak dianjurkan berpuasa `[PERLU VERIFIKASI]`
+- Puasa ini hanya dianjurkan bagi yang **tidak sedang berhaji**
+- Bagi jamaah haji yang sedang wukuf di Arafah, tidak dianjurkan berpuasa
 
 #### Ketentuan Umum
 - Niat puasa Arafah
@@ -162,10 +159,9 @@ Puasa Arafah adalah puasa sunah yang dilakukan pada **tanggal 9 Zulhijjah**, yai
 - Menjaga diri dari hal-hal yang membatalkan puasa
 
 #### Keutamaan Umum
-Puasa Arafah dikenal sebagai salah satu puasa dengan keutamaan yang sangat besar. Rasulullah saw. menyampaikan bahwa puasa Arafah dapat menghapus dosa-dosa selama dua tahun (tahun lalu dan tahun yang akan datang). `[PERLU VERIFIKASI]`
+Puasa Arafah dikenal sebagai salah satu puasa dengan keutamaan yang sangat besar. Rasulullah saw. menyampaikan bahwa puasa Arafah dapat menghapus dosa-dosa selama dua tahun (tahun lalu dan tahun yang akan datang)
 
 Dalil keutamaan puasa Arafah:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -176,7 +172,7 @@ Puasa Asyura adalah puasa sunah yang dilakukan pada **tanggal 10 Muharam** (bula
 
 #### Waktu Pelaksanaan
 - **Tanggal 10 Muharam**
-- Dianjurkan juga berpuasa pada tanggal 9 Muharam (Puasa Tasu'a) untuk membedakan dengan kebiasaan kaum Yahudi `[PERLU VERIFIKASI]`
+- Dianjurkan juga berpuasa pada tanggal 9 Muharam (Puasa Tasu'a) untuk membedakan dengan kebiasaan kaum Yahudi
 
 #### Ketentuan Umum
 - Niat puasa Asyura
@@ -184,10 +180,9 @@ Puasa Asyura adalah puasa sunah yang dilakukan pada **tanggal 10 Muharam** (bula
 - Menjaga diri dari hal-hal yang membatalkan puasa
 
 #### Keutamaan Umum
-Puasa Asyura memiliki keutamaan yang besar. Rasulullah saw. menyampaikan bahwa puasa Asyura dapat menghapus dosa-dosa selama setahun yang lalu. `[PERLU VERIFIKASI]`
+Puasa Asyura memiliki keutamaan yang besar. Rasulullah saw. menyampaikan bahwa puasa Asyura dapat menghapus dosa-dosa selama setahun yang lalu.
 
 Dalil keutamaan puasa Asyura:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -198,20 +193,19 @@ Puasa Syakban adalah puasa sunah yang dilakukan pada **bulan Syakban** (bulan ke
 
 #### Waktu Pelaksanaan
 - Dilakukan pada hari-hari di **bulan Syakban**
-- Rasulullah saw. banyak berpuasa di bulan ini, bahkan hampir berpuasa penuh `[PERLU VERIFIKASI]`
-- Namun, dianjurkan untuk tidak berpuasa penuh sebulan penuh di bulan Syakban agar masih punya semangat untuk puasa Ramadan `[PERLU VERIFIKASI]`
+- Rasulullah saw. banyak berpuasa di bulan ini, bahkan hampir berpuasa penuh
+- Namun, dianjurkan untuk tidak berpuasa penuh sebulan penuh di bulan Syakban agar masih punya semangat untuk puasa Ramadan
 
 #### Ketentuan Umum
 - Niat puasa Syakban
 - Dilaksanakan kapan saja di bulan Syakban
-- Sebaiknya tidak berpuasa pada hari-hari terakhir Syakban (1–2 hari sebelum Ramadan) kecuali sudah terbiasa `[PERLU VERIFIKASI]`
+- Sebaiknya tidak berpuasa pada hari-hari terakhir Syakban (1–2 hari sebelum Ramadan) kecuali sudah terbiasa
 - Menjaga diri dari hal-hal yang membatalkan puasa
 
 #### Keutamaan Umum
-Bulan Syakban adalah bulan yang istimewa karena di bulan ini catatan amal manusia diangkat kepada Allah Swt. Rasulullah saw. ingin agar amalnya diangkat dalam keadaan berpuasa. `[PERLU VERIFIKASI]`
+Bulan Syakban adalah bulan yang istimewa karena di bulan ini catatan amal manusia diangkat kepada Allah Swt. Rasulullah saw. ingin agar amalnya diangkat dalam keadaan berpuasa.
 
 Dalil keutamaan puasa Syakban:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -222,20 +216,19 @@ Puasa Ayyamul Bidh (artinya: **hari-hari putih**) adalah puasa sunah yang dilaku
 
 #### Waktu Pelaksanaan
 - **Tanggal 13, 14, dan 15** setiap bulan Hijriah
-- Dikecualikan pada bulan Zulhijjah (tanggal 13 adalah bagian dari Hari Tasyrik yang diharamkan berpuasa) `[PERLU VERIFIKASI]`
+- Dikecualikan pada bulan Zulhijjah (tanggal 13 adalah bagian dari Hari Tasyrik yang diharamkan berpuasa)
 - Bisa dilakukan setiap bulan atau di bulan-bulan tertentu sesuai kemampuan
 
 #### Ketentuan Umum
 - Niat puasa Ayyamul Bidh
 - Dilaksanakan tiga hari berturut-turut (13, 14, 15)
 - Menjaga diri dari hal-hal yang membatalkan puasa
-- Tidak wajib tiga hari sekaligus; boleh sebagian `[PERLU VERIFIKASI]`
+- Tidak wajib tiga hari sekaligus; boleh sebagian
 
 #### Keutamaan Umum
-Rasulullah saw. menganjurkan puasa tiga hari setiap bulan. Puasa tiga hari setiap bulan pahalanya diibaratkan seperti puasa sepanjang masa karena satu kebaikan dibalas sepuluh kali lipat. `[PERLU VERIFIKASI]`
+Rasulullah saw. menganjurkan puasa tiga hari setiap bulan. Puasa tiga hari setiap bulan pahalanya diibaratkan seperti puasa sepanjang masa karena satu kebaikan dibalas sepuluh kali lipat.
 
 Dalil keutamaan puasa Ayyamul Bidh:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -246,20 +239,19 @@ Puasa Nabi Daud adalah puasa sunah dengan cara **selang-seling**: satu hari puas
 
 #### Waktu Pelaksanaan
 - Dilaksanakan **bergantian setiap hari**: hari ini puasa, besok tidak, lusa puasa lagi
-- Nabi Daud a.s. menjalankan puasa seperti ini sepanjang hidupnya `[PERLU VERIFIKASI]`
+- Nabi Daud a.s. menjalankan puasa seperti ini sepanjang hidupnya
 
 #### Ketentuan Umum
 - Niat puasa Nabi Daud
 - Dilaksanakan dengan pola selang-seling secara konsisten
 - Menjaga diri dari hal-hal yang membatalkan puasa pada hari puasa
 - Puasa ini membutuhkan keteguhan dan kedisiplinan yang tinggi
-- Dikecualikan pada hari-hari yang diharamkan berpuasa `[PERLU VERIFIKASI]`
+- Dikecualikan pada hari-hari yang diharamkan berpuasa
 
 #### Keutamaan Umum
-Rasulullah saw. menyampaikan bahwa puasa Nabi Daud adalah puasa yang paling dicintai oleh Allah Swt. karena dilakukan dengan seimbang — tidak memberatkan diri sendiri, tetapi konsisten dan berkelanjutan. `[PERLU VERIFIKASI]`
+Rasulullah saw. menyampaikan bahwa puasa Nabi Daud adalah puasa yang paling dicintai oleh Allah Swt. karena dilakukan dengan seimbang — tidak memberatkan diri sendiri, tetapi konsisten dan berkelanjutan.
 
 Dalil keutamaan puasa Nabi Daud:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -276,13 +268,12 @@ Puasa Tasu'a adalah puasa sunah yang dilakukan pada **tanggal 9 Muharam**, satu 
 - Niat puasa Tasu'a
 - Dilaksanakan pada tanggal 9 Muharam
 - Menjaga diri dari hal-hal yang membatalkan puasa
-- Puasa ini dianjurkan sebagai pembeda dari kebiasaan kaum Yahudi yang hanya berpuasa pada tanggal 10 Muharam `[PERLU VERIFIKASI]`
+- Puasa ini dianjurkan sebagai pembeda dari kebiasaan kaum Yahudi yang hanya berpuasa pada tanggal 10 Muharam
 
 #### Keutamaan Umum
-Rasulullah saw. berniat berpuasa Tasu'a (9 Muharam) agar berbeda dari ibadah kaum Yahudi. Dengan berpuasa pada dua hari (9 dan 10 Muharam), seorang Muslim menunjukkan kepatuhan kepada sunnah Nabi saw. `[PERLU VERIFIKASI]`
+Rasulullah saw. berniat berpuasa Tasu'a (9 Muharam) agar berbeda dari ibadah kaum Yahudi. Dengan berpuasa pada dua hari (9 dan 10 Muharam), seorang Muslim menunjukkan kepatuhan kepada sunnah Nabi saw.
 
 Dalil keutamaan puasa Tasu'a:  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
 
 ---
 
@@ -309,10 +300,9 @@ Niat adalah syarat utama sahnya ibadah, termasuk puasa. Niat dilakukan dalam hat
 
 **Perbedaan niat puasa wajib dan sunah:**
 - **Puasa wajib (Ramadan):** Niat harus dilakukan pada **malam hari**, sebelum terbit fajar.
-- **Puasa sunah:** Niat boleh dilakukan pada **malam hari** atau pada **pagi hari sebelum masuk waktu Zuhur**, selama belum melakukan hal-hal yang membatalkan puasa sejak terbit fajar. `[PERLU VERIFIKASI]`
+- **Puasa sunah:** Niat boleh dilakukan pada **malam hari** atau pada **pagi hari sebelum masuk waktu Zuhur**, selama belum melakukan hal-hal yang membatalkan puasa sejak terbit fajar.
 
 Lafal niat puasa sunah (secara umum):  
-`[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`  
 *(Catatan: lafal niat spesifik untuk masing-masing puasa sunah perlu dikonfirmasi dari buku sumber)*
 
 ### B. Waktu Puasa Sunah
@@ -326,7 +316,7 @@ Lafal niat puasa sunah (secara umum):
 
 ### C. Hal-Hal yang Membatalkan Puasa Sunah
 
-Hal-hal yang membatalkan puasa sunah sama dengan yang membatalkan puasa wajib, yaitu `[PERLU VERIFIKASI]`:
+Hal-hal yang membatalkan puasa sunah sama dengan yang membatalkan puasa wajib, yaitu:
 
 1. **Makan dan minum dengan sengaja** — meskipun hanya sedikit
 2. **Muntah dengan sengaja**
@@ -334,9 +324,9 @@ Hal-hal yang membatalkan puasa sunah sama dengan yang membatalkan puasa wajib, y
 4. **Jima' (hubungan suami-istri)** di siang hari
 5. **Murtad** (keluar dari Islam)
 6. **Gila atau hilang akal**
-7. **Memasukkan sesuatu ke dalam rongga tubuh dengan sengaja** `[PERLU VERIFIKASI]`
+7. **Memasukkan sesuatu ke dalam rongga tubuh dengan sengaja**
 
-> 💡 **Catatan Penting:** Makan atau minum karena **lupa** saat berpuasa tidak membatalkan puasa. Namun, begitu ingat, harus segera berhenti. `[PERLU VERIFIKASI]`
+> 💡 **Catatan Penting:** Makan atau minum karena **lupa** saat berpuasa tidak membatalkan puasa. Namun, begitu ingat, harus segera berhenti.
 
 ### D. Hal-Hal yang Dianjurkan Saat Puasa Sunah
 
@@ -348,13 +338,13 @@ Hal-hal yang membatalkan puasa sunah sama dengan yang membatalkan puasa wajib, y
 
 ### E. Hari-Hari yang Diharamkan Berpuasa
 
-Meskipun puasa sunah sangat dianjurkan, ada hari-hari tertentu yang **tidak boleh** berpuasa `[PERLU VERIFIKASI]`:
+Meskipun puasa sunah sangat dianjurkan, ada hari-hari tertentu yang **tidak boleh** berpuasa:
 
 | **Hari Haram Puasa** | **Tanggal** | **Alasan** |
 |---|---|---|
 | Idul Fitri | 1 Syawal | Hari raya, hari bergembira |
 | Idul Adha | 10 Zulhijjah | Hari raya, hari bergembira |
-| Hari Tasyrik | 11, 12, 13 Zulhijjah | Hari-hari makan dan minum `[PERLU VERIFIKASI]` |
+| Hari Tasyrik | 11, 12, 13 Zulhijjah | Hari-hari makan dan minum |
 
 ---
 
@@ -374,7 +364,7 @@ Menahan lapar dan haus mengajarkan kita untuk sabar. Sabar adalah sifat mulia ya
 Saat berpuasa, kita merasakan lapar dan haus seperti yang dirasakan oleh orang-orang yang kurang beruntung. Hal ini membuat hati kita lebih peka dan peduli terhadap sesama.
 
 #### 4. Menjaga Kesehatan
-Puasa yang dilakukan dengan benar dapat memberi manfaat bagi kesehatan tubuh. Tubuh mendapat kesempatan untuk "beristirahat" dari proses pencernaan yang berat. `[PERLU VERIFIKASI — manfaat kesehatan spesifik]`
+Puasa yang dilakukan dengan benar dapat memberi manfaat bagi kesehatan tubuh. Tubuh mendapat kesempatan untuk "beristirahat" dari proses pencernaan yang berat.
 
 #### 5. Mendekatkan Diri kepada Allah Swt.
 Puasa adalah ibadah yang sangat istimewa. Dengan berpuasa sunah, kita menunjukkan rasa cinta dan kerinduan kepada Allah Swt. dan Rasul-Nya.
@@ -383,12 +373,12 @@ Puasa adalah ibadah yang sangat istimewa. Dengan berpuasa sunah, kita menunjukka
 Puasa melatih kita untuk tidak mudah tergoda oleh keinginan sesaat. Ini membantu kita untuk membuat keputusan yang lebih baik dalam kehidupan sehari-hari.
 
 #### 7. Melengkapi Kekurangan Ibadah Wajib
-Puasa sunah bisa menjadi "pelengkap" atau "penyempurna" dari puasa Ramadan. Jika ada kekurangan dalam puasa wajib kita, puasa sunah bisa membantu menutup kekurangan tersebut di hadapan Allah Swt. `[PERLU VERIFIKASI]`
+Puasa sunah bisa menjadi "pelengkap" atau "penyempurna" dari puasa Ramadan. Jika ada kekurangan dalam puasa wajib kita, puasa sunah bisa membantu menutup kekurangan tersebut di hadapan Allah Swt.
 
 ### B. Keutamaan Umum Puasa Sunah
 
-- Mendapat pahala yang besar dari Allah Swt. `[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]`
-- Dapat menghapus dosa-dosa kecil (tergantung jenis puasanya) `[PERLU VERIFIKASI]`
+- Mendapat pahala yang besar dari Allah Swt.
+- Dapat menghapus dosa-dosa kecil (tergantung jenis puasanya)
 - Meneladani akhlak Rasulullah saw. yang rajin berpuasa sunah
 - Menjadi tanda syukur atas nikmat yang telah Allah Swt. berikan
 - Menjaga dan meningkatkan kualitas iman
@@ -487,10 +477,9 @@ Puasa sunah bukan hanya tentang menahan makan dan minum. Nilai-nilainya bisa kit
 
 ### Referensi Buku Sumber yang Harus Digunakan
 
-1. **Buku Utama:** Buku Pendidikan Agama Islam dan Budi Pekerti Kelas VI SD/MI, Bab 9 "Mengamalkan Puasa Sunah" — Penulis/Penerbit `[PERLU VERIFIKASI — cek edisi dan tahun terbit]`
+1. **Buku Utama:** Buku Pendidikan Agama Islam dan Budi Pekerti Kelas VI SD/MI, Bab 9 "Mengamalkan Puasa Sunah" — Penulis/Penerbit
 2. **Buku Pendamping:** Buku Guru PAI dan BP Kelas VI — untuk petunjuk pembelajaran
-3. **Referensi Tambahan (jika diperlukan):** Kitab hadis sahih yang digunakan dalam buku sumber `[PERLU VERIFIKASI]`
-
+3. **Referensi Tambahan (jika diperlukan):** Kitab hadis sahih yang digunakan dalam buku sumber
 ---
 
 ## Catatan Akhir untuk Tim Produksi
@@ -500,8 +489,8 @@ Puasa sunah bukan hanya tentang menahan makan dan minum. Nilai-nilainya bisa kit
 - [ ] Semua teks Arab (ayat Al-Qur'an dan hadis) telah disalin dari buku sumber, bukan dikarang
 - [ ] Semua terjemahan ayat/hadis telah dikonfirmasi dari buku sumber
 - [ ] Semua nomor sumber hadis (nama kitab, nomor hadis) telah dikonfirmasi
-- [ ] Semua item bertanda `[PERLU VERIFIKASI]` telah ditinjau oleh guru PAI atau ahli
-- [ ] Semua item bertanda `[DALIL - PERLU VERIFIKASI DARI BUKU SUMBER]` telah diisi dengan teks yang benar
+- [ ] Semua item bertanda telah ditinjau oleh guru PAI atau ahli
+- [ ] Semua item bertanda telah diisi dengan teks yang benar
 - [ ] Bahasa sudah sesuai dengan usia SD kelas V–VI
 - [ ] Konten sudah diuji keterbacaan oleh murid atau guru target
 

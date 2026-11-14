@@ -1,132 +1,83 @@
 /**
  * EKSPEDISI PUASA SUNAH – Petualangan di Pulau Hikmah
- * CSS Responsif: Adaptasi Laptop, Tablet, & Smartphone (responsive.css)
+ * CSS Responsif: Sistem Fixed Design Canvas 16:9 & Uniform Scaling (responsive.css)
+ * 
+ * Prinsip Utama:
+ * 1. Mempertahankan 100% rasio 16:9 dan tata letak asli pada semua perangkat.
+ * 2. Tidak melakukan reflow, penyusunan ulang elemen, atau pengubahan komposisi visual.
+ * 3. Ruang sisa di luar rasio 16:9 menjadi area letterboxing (pillarbox/letterbox).
+ * 4. Menyediakan banner petunjuk rotasi perangkat di area letterbox layar HP portrait.
  */
 
-/* Layar Sedang & Tablet (<= 1024px) */
-@media (max-width: 1024px) {
-  .screen-body {
-    padding: 16px 20px;
-    gap: 16px;
-  }
-
-  .kaka-companion-col {
-    width: 210px !important;
-  }
-
-  .kaka-character-img,
-  .kaka-img-display {
-    max-height: 250px !important;
-    max-width: 200px !important;
-  }
-
-  .main-content-panel {
-    padding: 20px 24px;
-  }
-
-  .puasa-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .zone-nav-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
+/* 1. Petunjuk Rotasi Layar HP Portrait (Hanya tampil di ruang letterbox saat posisi tegak) */
+.orientation-rotate-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 193, 7, 0.55);
+  color: #fffdf0;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  transition: opacity 0.3s ease;
 }
 
-/* Tablet Kecil & Smartphone (<= 768px) */
-@media (max-width: 768px) {
+.orientation-rotate-hint.visible {
+  display: flex;
+}
+
+.orientation-rotate-hint .hint-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* 2. Optimasi Pencetakan (Cetak Rapor / Sertifikat Murid) */
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+
   #app-viewport {
-    height: auto;
-    min-height: 100vh;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: none !important;
+    overflow: visible !important;
   }
 
   #app-stage {
-    aspect-ratio: auto;
-    height: auto;
-    min-height: 100vh;
-    border-radius: 0;
-  }
-
-  .screen-view {
-    position: relative;
-    min-height: 100vh;
-    overflow-y: auto;
-  }
-
-  .screen-body {
-    flex-direction: column-reverse;
-    padding: 12px 14px;
-    overflow-y: visible;
-  }
-
-  .kaka-companion-col {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
     width: 100% !important;
-    max-width: 100% !important;
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
+    height: auto !important;
+    overflow: visible !important;
+    background: none !important;
   }
 
-  .kaka-character-img,
-  .kaka-img-display {
-    max-height: 200px !important;
-    max-width: 160px !important;
+  .global-fullscreen-fab,
+  .orientation-rotate-hint,
+  .btn-back-to-map,
+  #print-report-btn {
+    display: none !important;
   }
 
-  .kaka-speech-bubble {
-    margin-bottom: 0;
-    font-size: 0.85rem;
-  }
-
-  .puasa-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .zone-nav-container {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .map-header-controls {
-    gap: 8px;
-  }
-
-  .header-circle-btn {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-  }
-
-  .map-progress-indicator {
-    height: 38px;
-    min-width: 38px;
-    padding: 0 10px;
-    font-size: 0.85rem;
-  }
-
-  .buckets-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .matching-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .header-title {
-    font-size: 0.95rem;
-  }
-
-  .global-fullscreen-fab {
-    bottom: 12px;
-    right: 12px;
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    min-height: 42px;
-  }
-
-  .global-fullscreen-fab .fs-icon {
-    font-size: 1.25rem;
+  .screen-view.active {
+    position: static !important;
+    opacity: 1 !important;
+    display: block !important;
   }
 }

@@ -447,10 +447,11 @@
 
 /* 5. MODAL POPUP (FEEDBACK & BADGE) */
 .feedback-modal, .badge-modal, .app-modal {
-  position: fixed;
+  position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: none;
   align-items: center;
   justify-content: center;
