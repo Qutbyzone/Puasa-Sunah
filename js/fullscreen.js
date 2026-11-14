@@ -95,11 +95,17 @@ window.MPI_FULLSCREEN = {
     document.body.classList.add("pseudo-fullscreen");
     window.scrollTo(0, 0);
     this.updateUI();
+    if (window.MPI_SCALE && window.MPI_SCALE.update) {
+      window.MPI_SCALE.update();
+    }
   },
 
   exitPseudo() {
     document.body.classList.remove("pseudo-fullscreen");
     this.updateUI();
+    if (window.MPI_SCALE && window.MPI_SCALE.update) {
+      window.MPI_SCALE.update();
+    }
   },
 
   updateUI() {
