@@ -200,6 +200,19 @@
   background-position: center;
 }
 
+/* ========================================================
+   JALUR EKSPEDISI: Titik-titik Penghubung Misi (SVG Path)
+   ======================================================== */
+.expedition-path-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5; /* di bawah map pins (z-index: 10) */
+  overflow: visible;
+}
+
 .map-pin {
   position: absolute;
   cursor: pointer;
@@ -513,10 +526,7 @@
   .map-canvas-container .pin-label-box { max-width: 135px; font-size: .66rem; }
 }
 
-/* Menggeser tombol Misi 1 sedikit ke tengah */
-.map-canvas-container .map-pin:nth-of-type(2) {
-  left: calc(var(--mission-1-left, 18%) + 5%) !important;
-}
+/* [Dihapus] Override posisi Misi 1 — posisi kini diatur via inline style */
 
 
 /* ANIMASI TOMBOL PETA JELAJAH */

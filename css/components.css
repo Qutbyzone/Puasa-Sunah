@@ -1002,14 +1002,75 @@
   position: absolute !important;
   inset: 0 !important;
   display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
   width: 100% !important;
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  /* Geser kelompok tombol+sambutan sedikit ke bawah dari tengah */
+  padding-top: 10% !important;
   box-sizing: border-box;
   z-index: 10;
+  gap: 18px;
+}
+
+/* ========================================================
+   PESAN SAMBUTAN HALAMAN COVER — Di bawah tombol Mulai
+   ======================================================== */
+
+.cover-welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  user-select: none;
+  animation: coverWelcomeFadeIn 1.2s ease 0.4s both;
+}
+
+@keyframes coverWelcomeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cover-welcome-title {
+  font-family: "Segoe UI", "Trebuchet MS", Roboto, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFD93D;
+  text-shadow:
+    0 0 18px rgba(255, 217, 61, 0.9),
+    0 2px 8px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(255, 193, 7, 0.5);
+  line-height: 1.2;
+}
+
+.cover-welcome-sub {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow:
+    0 1px 6px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
+  opacity: 0.92;
+  background: rgba(0, 0, 0, 0.32);
+  padding: 5px 20px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 217, 61, 0.25);
 }
 
 #cover-start-btn {
@@ -1018,7 +1079,8 @@
   outline: none !important;
   box-shadow: none !important;
   padding: 0 !important;
-  margin: auto !important;
+  margin: 0 !important;          /* ← dulu "auto" — menyebabkan tulisan terdorong ke bawah */
+  flex-shrink: 0;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;

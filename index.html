@@ -24,17 +24,26 @@
   <div id="app-viewport">
     <div id="app-stage">
 
-      <!-- ========================================== -->
-      <!-- LAYAR 01: COVER PEMBUKA (SCR-001)           -->
-      <!-- ========================================== -->
-      <section class="screen-view active" id="SCR-001" style="background-image: url('assets/backgrounds/bg-cover.jpg');">
-        <audio id="cover-voice-player" src="assets/audio/narration/vo-01-cover.wav" autoplay preload="auto"></audio>
-        <div class="screen-body cover-screen-body">
-          <button id="cover-start-btn" class="graphic-action-btn graphic-pulse-btn" title="Mulai Permainan">
-            <img src="assets/ui/btn-mulai-permainan.png" alt="Mulai Permainan" class="btn-img-asset">
-          </button>
-        </div>
-      </section>
+<!-- ========================================== -->
+<!-- LAYAR 01: COVER PEMBUKA (SCR-001)           -->
+<!-- ========================================== -->
+<section class="screen-view active" id="SCR-001" style="background-image: url('assets/backgrounds/bg-cover.jpg');">
+  <audio id="cover-voice-player" src="assets/audio/narration/vo-01-cover.wav" autoplay preload="auto"></audio>
+
+  <div class="screen-body cover-screen-body">
+
+    <button id="cover-start-btn" class="graphic-action-btn graphic-pulse-btn" title="Mulai Permainan">
+      <img src="assets/ui/btn-mulai-permainan.png" alt="Mulai Permainan" class="btn-img-asset">
+    </button>
+
+    <!-- TULISAN SAMBUTAN DI BAWAH TOMBOL MULAI -->
+    <div class="cover-welcome-message" aria-hidden="true">
+      <span class="cover-welcome-title">SELAMAT DATANG</span>
+      <span class="cover-welcome-sub">Jelajahi 5 Zona Penuh Rahasia dan Kumpulkan 5 Lencana Pusaka</span>
+    </div>
+
+  </div>
+</section>
 
 
       <!-- ========================================== -->
@@ -177,9 +186,44 @@
 
         <!-- Area Kanvas Peta dengan 5 Pin Lokasi Interaktif + Pin Materi -->
         <div class="map-canvas-container" style="flex: 1; position: relative;">
-          
+
+          <!-- ========================================== -->
+          <!-- JALUR EKSPEDISI: Titik Penghubung Misi      -->
+          <!-- ========================================== -->
+          <svg class="expedition-path-svg" viewBox="0 0 1280 656" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
+            <defs>
+              <filter id="path-glow" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Bayangan titik jalur -->
+            <polyline
+              points="205,241 384,487 870,487 973,225 640,369 691,107"
+              fill="none"
+              stroke="rgba(0,0,0,0.5)"
+              stroke-width="8"
+              stroke-dasharray="4 16"
+              stroke-linecap="round"
+            />
+            <!-- Titik-titik jalur ekspedisi emas -->
+            <polyline
+              points="205,241 384,487 870,487 973,225 640,369 691,107"
+              fill="none"
+              stroke="#FFD700"
+              stroke-width="5"
+              stroke-dasharray="4 16"
+              stroke-linecap="round"
+              opacity="0.80"
+              filter="url(#path-glow)"
+            />
+          </svg>
+
           <!-- TOMBOL MATERI PEMBELAJARAN (Menuju SCR-013) -->
-          <div class="map-pin unlocked materi-pin" id="map-materi-btn" role="button" tabindex="0" aria-label="Buka Materi Pembelajaran" style="left: 20.5%; top: 38%;" title="Buka Materi Pembelajaran">
+          <div class="map-pin unlocked materi-pin" id="map-materi-btn" role="button" tabindex="0" aria-label="Buka Materi Pembelajaran" style="left: 16%; top: 30%;" title="Buka Materi Pembelajaran">
             <div class="pin-marker-circle materi-circle"><img src="assets/map-icons/materi-book.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
             <div class="pin-label-box materi-label">
               <span>MATERI</span>
@@ -187,7 +231,7 @@
           </div>
 
           <!-- PIN 1: Pantai Pengetahuan (Bawah Kiri) -->
-          <div class="map-pin unlocked" data-mission="1" role="button" tabindex="0" aria-label="Misi 1: Pantai Pengetahuan" style="left: 18%; top: 62%;">
+          <div class="map-pin unlocked" data-mission="1" role="button" tabindex="0" aria-label="Misi 1: Pantai Pengetahuan" style="left: 30%; top: 68%;">
             <div class="pin-marker-circle"><img src="assets/map-icons/misi1-beach.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
             <div class="pin-label-box">
               <span>Pantai Pengetahuan</span>
@@ -196,7 +240,7 @@
           </div>
 
           <!-- PIN 2: Hutan Kalender (Kanan Bawah) -->
-          <div class="map-pin locked" data-mission="2" role="button" tabindex="0" aria-label="Misi 2: Hutan Kalender" style="left: 72%; top: 68%;">
+          <div class="map-pin locked" data-mission="2" role="button" tabindex="0" aria-label="Misi 2: Hutan Kalender" style="left: 68%; top: 68%;">
             <div class="pin-marker-circle"><img src="assets/map-icons/misi2-calendar.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
             <div class="pin-label-box">
               <span>Hutan Kalender</span>
@@ -205,7 +249,7 @@
           </div>
 
           <!-- PIN 3: Gua Hadis (Kanan Atas / Tebing Batu) -->
-          <div class="map-pin locked" data-mission="3" role="button" tabindex="0" aria-label="Misi 3: Gua Hadis" style="left: 78%; top: 32%;">
+          <div class="map-pin locked" data-mission="3" role="button" tabindex="0" aria-label="Misi 3: Gua Hadis" style="left: 76%; top: 28%;">
             <div class="pin-marker-circle"><img src="assets/map-icons/misi3-lantern.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
             <div class="pin-label-box">
               <span>Gua Hadis</span>
@@ -214,7 +258,7 @@
           </div>
 
           <!-- PIN 4: Desa Inspirasi (Lembah Tengah) -->
-          <div class="map-pin locked" data-mission="4" role="button" tabindex="0" aria-label="Misi 4: Desa Inspirasi" style="left: 48%; top: 52%;">
+          <div class="map-pin locked" data-mission="4" role="button" tabindex="0" aria-label="Misi 4: Desa Inspirasi" style="left: 50%; top: 50%;">
             <div class="pin-marker-circle"><img src="assets/map-icons/misi4-village.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
             <div class="pin-label-box">
               <span>Desa Inspirasi</span>
@@ -223,7 +267,7 @@
           </div>
 
           <!-- PIN 5: Puncak Kebiasaan (Puncak Gunung Tertinggi) -->
-          <div class="map-pin locked" data-mission="5" role="button" tabindex="0" aria-label="Misi 5: Puncak Kebiasaan" style="left: 46%; top: 18%;">
+          <div class="map-pin locked" data-mission="5" role="button" tabindex="0" aria-label="Misi 5: Puncak Kebiasaan" style="left: 54%; top: 10%;">
             <div class="pin-marker-circle"><img src="assets/map-icons/misi5-mountain.png" class="map-pin-icon" alt="" aria-hidden="true"></div>
             <div class="pin-label-box">
               <span>Puncak Kebiasaan</span>
